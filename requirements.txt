@@ -9,7 +9,7 @@ charset-normalizer==3.3.0
 cleo==2.0.1
 crashtest==0.4.1
 distlib==0.3.7
-Django==4.2.6
+Django==3.2.22
 django-environ==0.10.0
 dulwich==0.21.6
 filelock==3.12.4
@@ -49,6 +49,7 @@ pycparser==2.21
 pyparsing==3.1.1
 pyproject_hooks==1.0.0
 pyrsistent==0.19.3
+pytz==2023.3.post1
 rapidfuzz==2.15.2
 requests==2.31.0
 requests-toolbelt==1.0.0
