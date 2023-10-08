@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desencriptar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body style="background-color: #dfe6e9;">
+    <center>
+        <br>
+        <h1>Lector de cadena</h1>
+        <br>
+        <form action="." method="post">
+            {% csrf_token %}
+            <div class="form-group">
+            <input type="text" name="cadena" class="input" required style="display: flex;">
+            <br>
+            <button type="submit" class="btn btn-success">Desencriptar</button>
+            <br>
+
+            <br>
+
+            {% if resultado %}
+            <h3>Nombre: {{ resultado.first_name }}</h3>
+            <h3>Apellido: {{ resultado.last_name }}</h3>
+            <h3>ID: {{ resultado.id }}</h3>
+            
+            <br>
+
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/750432905?h=ab55dbe681" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+            <br>
+            {% endif %}
+            <br>
+        </form>
+        </center>
+        </div>
+        <br>
+        <h5 style="position: fixed; bottom: 0; width: 100%; background-color: #f8f9fa; text-align: center; padding: 10px 0;">Eduardo Medina Estrada</h5>
+</body>
+</html>
+<div>
+<br>

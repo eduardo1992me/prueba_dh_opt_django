@@ -1,0 +1,10 @@
+.my-button {
+    background-color: #4CAF50;
+    /* Otros estilos aquí */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
