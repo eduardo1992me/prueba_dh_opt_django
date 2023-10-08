@@ -66,4 +66,4 @@ virtualenv==20.24.5
 webencodings==0.5.1
 whitenoise==6.5.0
 xattr==0.10.1
-zipp==3.17.0
+zipp==3.15.0
