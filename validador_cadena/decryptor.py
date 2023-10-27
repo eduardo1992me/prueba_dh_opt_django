@@ -1,3 +1,5 @@
+import re
+
 def reader(data):
     control = 0
     name = ""
@@ -6,6 +8,7 @@ def reader(data):
     pos = []
     sub_pos_1 = []
     sub_pos_2 = []
+    
 
     for i in range(len(data)):
         if data[i] == "0":
@@ -42,3 +45,16 @@ def reader(data):
     decrypted = {}
     decrypted = {"first_name" : name, "last_name": last_name, "id": id}
     return decrypted
+
+
+def reader_pro(data):
+    try:
+        pattern = r'([A-Za-z]+)0+([A-Za-z]+)0+(\d+)'
+        searcher = re.findall(pattern, data)
+        for i in searcher:
+            name, last_name, id = i
+        decrypted_pro = {"first_name" : name, "last_name": last_name, "id": id, "result": True}
+        return decrypted_pro
+    except:
+        error = {"first_name" : "Error", "last_name": "In", "id": "String", "result": False}
+        return error

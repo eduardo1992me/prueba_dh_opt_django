@@ -9,27 +9,31 @@
 <body style="background-color: #dfe6e9;">
     <center>
         <br>
-        <h1>Lector de cadena</h1>
+        <h1>String reader</h1>
         <br>
         <form action="." method="post">
             {% csrf_token %}
             <div class="form-group">
             <input type="text" name="cadena" class="input" required style="display: flex;">
             <br>
-            <button type="submit" class="btn btn-success">Desencriptar</button>
+            <button type="submit" class="btn btn-success">Decrypt</button>
             <br>
 
             <br>
-
-            {% if resultado %}
-            <h3>Nombre: {{ resultado.first_name }}</h3>
-            <h3>Apellido: {{ resultado.last_name }}</h3>
-            <h3>ID: {{ resultado.id }}</h3>
-            
-            <br>
-
-            <iframe title="vimeo-player" src="https://player.vimeo.com/video/750432905?h=ab55dbe681" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
-            <br>
+           
+            {% if resultado.result == True %}
+                <h3>Nombre: {{ resultado.first_name }}</h3>
+                <h3>Apellido: {{ resultado.last_name }}</h3>
+                <h3>ID: {{ resultado.id }}</h3>
+            {% else %}
+                <br>
+                <strong>Wrong format</strong>
+                <br>
+                <br>
+                <img src="/static/img/the-magic-word.gif" alt="GIF">
+                <audio autoplay loop>
+                    <source src="/static/audio/magic_word.mp3" type="audio/mp3">
+                </audio>
             {% endif %}
             <br>
         </form>
@@ -37,7 +41,9 @@
         </div>
         <br>
         <h5 style="position: fixed; bottom: 0; width: 100%; background-color: #f8f9fa; text-align: center; padding: 10px 0;">Eduardo Medina Estrada</h5>
-</body>
+
+    </body>
+
 </html>
 <div>
 <br>
